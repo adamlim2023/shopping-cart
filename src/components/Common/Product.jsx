@@ -1,9 +1,15 @@
 import React from "react";
-import INR from "assets/images/icons/inr.svg";
+import { useDispatch } from "react-redux";
 import AddButton from "./AddButton";
+import INR from "assets/images/icons/inr.svg";
+import { addProduct } from "store/actions/Produt";
 
 const Product = (props) => {
   const { id, name, price, avatar } = props;
+  const dispatch = useDispatch();
+  const handleBuy = () => {
+    dispatch(addProduct(id));
+  }
 
   return (
     <div className="flex shadow-product bg-[#F6F6F6] p-2 rounded-[10px]">
@@ -19,7 +25,7 @@ const Product = (props) => {
             <img src={INR} className="mr-2" alt="" />
             <span className="font-medium text-sm leading-4">₹{price}</span>
           </p>
-          <AddButton />
+          <AddButton onClick={handleBuy} />
         </div>
       </div>
     </div>
