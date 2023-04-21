@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: Graphik;
+  font-weight: 100;
+  src: url('../fonts/GraphikThin.otf');
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight: 200;
+  src: url('../fonts/GraphikExtralight.otf');
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight: 300;
+  src: url('../fonts/GraphikLight.otf');
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight: 400;
+  src: url('../fonts/GraphikRegular.otf');
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight: 500;
+  src: url('../fonts/GraphikMedium.otf');
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight: 600;
+  src: url('../fonts/GraphikSemibold.otf');
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight: 700;
+  src: url('../fonts/GraphikBold.otf');
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight: 800;
+  src: url('../fonts/GraphikSuper.otf');
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight: 900;
+  src: url('../fonts/GraphikBlack.otf');
+}
