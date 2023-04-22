@@ -14,7 +14,7 @@ const Collapse = ({ title, children }) => {
   return (
     <div className="mb-6">
       <div className="flex items-center justify-between px-4">
-        <span className="flex-shrink-0">{title}</span>
+        <span className="flex-shrink-0 font-medium text-sm">{title}</span>
         <span className="inline-block w-full h-[1px] bg-[#4A5662] opacity-10 mx-2"></span>
         <img src={CaretIcon}
           onClick={handleToggleOpen}
@@ -25,7 +25,6 @@ const Collapse = ({ title, children }) => {
       <div
         className={`overflow-hidden transition-all duration-500 ${isOpened ? `max-h-screen` : `max-h-[0px]`}`}
         ref={bodyRef}
-      // style={{ height: isOpened ? `${height}px` : 0 }}
       >
         {children}
       </div>
