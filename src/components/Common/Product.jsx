@@ -2,13 +2,13 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import AddButton from "./AddButton";
 import INR from "assets/images/icons/inr.svg";
-import { addProduct } from "store/actions/Produt";
+import { increaseProduct } from "store/actions/Cart";
 
 const Product = (props) => {
   const { id, name, price, avatar } = props;
   const dispatch = useDispatch();
   const handleBuy = () => {
-    dispatch(addProduct(id));
+    dispatch(increaseProduct(id));
   }
 
   return (
@@ -16,7 +16,7 @@ const Product = (props) => {
       <img
         className="flex-shrink-0 w-[72px] min-h-[72px] object-cover rounded-[10px]"
         src={avatar}
-        alt={props.name}
+        alt={name}
       />
       <div className="w-full ml-4 flex flex-col justify-between">
         <p className="font-medium text-base leading-5 mb-4">{name}</p>

@@ -72,7 +72,7 @@ const Home = () => {
         {getUniqueCategories(products).map((category, index) => {
           return (
             <Collapse title={category} key={index}>
-              <div className="px-4 py-6">
+              <div className="px-4 pt-6">
                 {products.map(
                   (product) =>
                     product.category === category && (

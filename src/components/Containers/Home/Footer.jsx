@@ -8,7 +8,7 @@ import BoltBlackIcon from "assets/images/icons/bolt_black.svg";
 
 const Footer = () => {
   const navigate = useNavigate();
-  const { order } = useSelector(state => state.cart);
+  const { count } = useSelector(state => state.cart);
 
   return (
     <div className="fixed bottom-0 left-0 right-0 px-8 py-4 flex items-center justify-between bg-[#F1F1F1] rounded-t-[10px]">
@@ -19,10 +19,10 @@ const Footer = () => {
         <img src={BookOpenIcon} alt="" />
       </IconButton>
       <div className="relative">
-        <span className="w-4 h-4 inline-flex items-center justify-center bg-[#EF4B4B] text-white text-xs font-medium rounded-full absolute 
-        -top-1.5 -right-1.5">
-          {order.map(item => item.count).reduce((a, b) => a + b, 0)}
+        {count > 0 && <span className="w-4 h-4 inline-flex pointer-events-none items-center justify-center bg-[#EF4B4B] text-white text-[10px] pt-0.5 font-semibold rounded-full absolute -top-1.5 -right-1.5">
+          {count}
         </span>
+        }
         <IconButton onClick={() => navigate('/cart')}>
           <img src={ShoppingBagIcon} alt="" />
         </IconButton>
