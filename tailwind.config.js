@@ -20,6 +20,15 @@ module.exports = {
         'button-order': '-5px 5px 10px rgba(205, 205, 205, 0.2), 5px -5px 10px rgba(205, 205, 205, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(205, 205, 205, 0.9)',
         'order': 'inset -3px -3px 7px #FFFFFF, inset 2px 2px 5px rgba(174, 174, 192, 0.4)'
       },
+      animation: {
+        zoom: 'zoom 0.2s linear 1',
+      },
+      keyframes: {
+        zoom: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.5)' },
+        }
+      }
     },
   },
   plugins: [],

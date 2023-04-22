@@ -1,9 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import Order from "components/Common/Order";
-import Collapse from "components/Common/Collapse";
 import IconButton from "components/Common/IconButton";
+import Collapse from "components/Common/Collapse";
+import Order from "components/Common/Order";
+import Transition from "components/Common/Transition";
 
 import { placeOrder } from 'store/actions/Cart';
 
@@ -21,7 +22,7 @@ const Cart = () => {
     navigate('/');
   };
 
-  return <div>
+  return <Transition>
     <div className="flex items-center justify-between bg-[#F1F1F1] px-4 pt-8 pb-6 rounded-b-[10px] shadow-header">
       <div className="flex items-center">
         <IconButton onClick={() => navigate('/')}>
@@ -63,17 +64,21 @@ const Cart = () => {
         }
       </Collapse>
     </div>
-    <div
-      className="h-11 flex items-center justify-between rounded-[10px] bg-gradient-to-b from-[#459EAF] to-[#007991] fixed left-2 right-2 bottom-4 text-white shadow-button-order pl-4 pr-2"
-      onClick={handlePlaceOrder}
-    >
-      <span className="font-medium text-xs leading-4">4 items</span>
-      <div className="flex items-center">
-        <span className="font-semibold text-[13px] mr-2">PLACE ORDER</span>
-        <img src={ArrowRightIcon} alt="" />
+    <div className="fixed left-0 right-0 bottom-0">
+      <div className="max-w-lg mx-auto px-2 pb-4">
+        <div
+          className="h-11 flex items-center justify-between rounded-[10px] bg-gradient-to-b from-[#459EAF] to-[#007991]  text-white shadow-button-order pl-4 pr-2"
+          onClick={handlePlaceOrder}
+        >
+          <span className="font-medium text-xs leading-4">4 items</span>
+          <div className="flex items-center">
+            <span className="font-semibold text-[13px] mr-2">PLACE ORDER</span>
+            <img src={ArrowRightIcon} alt="" />
+          </div>
+        </div>
       </div>
     </div>
-  </div>;
+  </Transition>;
 };
 
 export default Cart;
