@@ -73,7 +73,7 @@ const Cart = () => {
     <div className="fixed left-0 right-0 bottom-0">
       <div className="max-w-lg mx-auto px-2 pb-4">
         <div
-          className="h-11 flex items-center justify-between rounded-[10px] bg-gradient-to-b from-[#459EAF] to-[#007991]  text-white shadow-button-order pl-4 pr-2 cursor-pointer"
+          className="h-11 flex items-center justify-between rounded-[10px] bg-gradient-to-b from-[#459EAF] to-[#007991]  text-white shadow-button-order pl-4 pr-2 cursor-pointer transition hover:opacity-70"
           onClick={handlePlaceOrder}
         >
           <span className="font-medium text-xs leading-4">4 items</span>
