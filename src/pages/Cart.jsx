@@ -42,10 +42,13 @@ const Cart = () => {
           currOrders.length > 0 && <div className="mx-2 mt-4">
             <div className="shadow-order py-4 rounded-[10px]">
               {
-                currOrders.map(order => <div key={order.id} className="mb-6 last:mb-0">
+                currOrders.map(order => <div key={order.id} className="mb-6">
                   <Order {...order} />
                 </div>)
               }
+              <span className="px-2 font-medium text-xs text-[#76DFE6] underline">
+                Add cooking instruction
+              </span>
             </div>
           </div>
         }
@@ -55,10 +58,13 @@ const Cart = () => {
           prevOrders.length > 0 && <div className="mx-2 mt-4">
             <div className="shadow-order py-4 rounded-[10px]">
               {
-                prevOrders.map(order => <div key={order.id} className="mb-6 last:mb-0">
+                prevOrders.map(order => <div key={order.id} className="mb-6">
                   <Order {...order} editable={false} />
                 </div>)
               }
+              <span className="px-2 font-medium text-xs text-[#76DFE6] underline">
+                Add cooking instruction
+              </span>
             </div>
           </div>
         }

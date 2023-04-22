@@ -23,7 +23,7 @@ const Order = ({ id, count, editable = true }) => {
 
   return (
     <div className="flex items-center justify-between px-2">
-      <div className="flex items-center">
+      <div className="flex items-center pr-2">
         <img src={INR} className="mr-2" alt="" />
         <div>
           <p className="text-sm leading-5 mb-1">{product?.name}</p>
