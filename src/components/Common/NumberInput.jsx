@@ -4,9 +4,19 @@ import PlusIcon from 'assets/images/icons/plus.svg';
 
 const NumberInput = ({ value, onChange }) => {
   return <div className='h-8 flex flex-shrink-0 items-center bg-[#F1F1F1] shadow-button-add rounded-[10px] p-1'>
-    <img src={MinusIcon} alt="decrease" onClick={() => value > 1 && onChange(value - 1)} />
+    <img
+      src={MinusIcon}
+      className='cursor-pointer'
+      alt="decrease"
+      onClick={() => value > 1 && onChange(value - 1)}
+    />
     <p className='min-w-[30px] font-medium text-[13px] text-center mx-0.5'>{value}</p>
-    <img src={PlusIcon} alt="increase" onClick={() => onChange(value + 1)} />
+    <img
+      src={PlusIcon}
+      className='cursor-pointer'
+      alt="increase"
+      onClick={() => onChange(value + 1)}
+    />
   </div>
 }
 
