@@ -46,7 +46,7 @@ const Cart = () => {
                   <Order {...order} />
                 </div>)
               }
-              <span className="px-4 font-medium text-xs text-[#76DFE6] underline">
+              <span className="px-4 font-medium text-xs text-[#76DFE6] underline cursor-pointer">
                 Add cooking instruction
               </span>
             </div>
@@ -62,7 +62,7 @@ const Cart = () => {
                   <Order {...order} editable={false} />
                 </div>)
               }
-              <span className="px-4 font-medium text-xs text-[#76DFE6] underline">
+              <span className="px-4 font-medium text-xs text-[#76DFE6] underline cursor-pointer">
                 Add cooking instruction
               </span>
             </div>
